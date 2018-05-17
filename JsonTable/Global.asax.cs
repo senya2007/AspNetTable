@@ -1,4 +1,9 @@
-﻿using System;
+﻿using JsonTable.Clients.Mappers;
+using JsonTable.Services;
+using JsonTable.Services.Business;
+using JsonTable.Services.Mappers;
+using LightInject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,10 +17,24 @@ namespace JsonTable
     {
         protected void Application_Start()
         {
+
+            var container = new ServiceContainer();
+            container.RegisterControllers();
+            RegisterServices(container);
+            container.EnableMvc();
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
+
+        private void RegisterServices(ServiceContainer container)
+        {
+            container.Register<IStockService, StockService>();
+            container.Register<IStockClientMapper, StockClientMapper>();
+            container.Register<IPhisixApiService, PhisixApiService>();
+            container.Register<IPhisixMapper, PhisixMapper>();
         }
     }
 }

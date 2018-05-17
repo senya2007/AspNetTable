@@ -1,6 +1,9 @@
-﻿using System;
+﻿using JsonTable.Clients.Mappers;
+using JsonTable.Services.Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,9 +11,19 @@ namespace JsonTable.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+
+        private IStockService stockService;
+        private IStockClientMapper clientStockMapper;
+        
+        public HomeController(IStockService stockService, IStockClientMapper clientStockMapper)
         {
-            return View();
+            this.stockService = stockService;
+            this.clientStockMapper = clientStockMapper;
+        }
+
+        public async Task<ActionResult> Index()
+        {
+            return View(clientStockMapper.Map(await stockService.GetStocks()));
         }
 
         public ActionResult About()

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using JsonTable.Models;
+using JsonTable.Services.DTO;
 
 namespace JsonTable.Services.Mappers
 {

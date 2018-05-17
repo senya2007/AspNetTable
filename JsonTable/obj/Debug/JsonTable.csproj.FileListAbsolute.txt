@@ -48,3 +48,8 @@ C:\Users\Александр\Source\Repos\JsonTable\JsonTable\obj\Debug\JsonTable
 C:\Users\Александр\Source\Repos\JsonTable\JsonTable\obj\Debug\JsonTable.csproj.CoreCompileInputs.cache
 C:\Users\Александр\Source\Repos\JsonTable\JsonTable\obj\Debug\JsonTable.dll
 C:\Users\Александр\Source\Repos\JsonTable\JsonTable\obj\Debug\JsonTable.pdb
+C:\Users\Александр\Source\Repos\JsonTable\JsonTable\bin\LightInject.Mvc.dll
+C:\Users\Александр\Source\Repos\JsonTable\JsonTable\bin\LightInject.Web.dll
+C:\Users\Александр\Source\Repos\JsonTable\JsonTable\bin\LightInject.Mvc.pdb
+C:\Users\Александр\Source\Repos\JsonTable\JsonTable\bin\LightInject.Web.pdb
+C:\Users\Александр\Source\Repos\JsonTable\JsonTable\bin\LightInject.Web.xml

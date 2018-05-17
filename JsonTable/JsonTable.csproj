@@ -49,6 +49,12 @@
     <Reference Include="LightInject, Version=5.1.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\LightInject.5.1.3\lib\net46\LightInject.dll</HintPath>
     </Reference>
+    <Reference Include="LightInject.Mvc, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Mvc.2.0.0\lib\net46\LightInject.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="LightInject.Web, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\LightInject.Web.2.0.0\lib\net46\LightInject.Web.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -145,11 +151,28 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Clients\DTO\PriceClientDto.cs" />
+    <Compile Include="Clients\DTO\StockClientDto.cs" />
+    <Compile Include="Clients\DTO\StockListClientDto.cs" />
+    <Compile Include="Clients\Mappers\IStockClientMapper.cs" />
+    <Compile Include="Clients\Mappers\StockClientMapper.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Price.cs" />
+    <Compile Include="Models\Stock.cs" />
+    <Compile Include="Models\StockList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Business\IStockService.cs" />
+    <Compile Include="Services\Business\StockService.cs" />
+    <Compile Include="Services\DTO\PhisixApiPriceDto.cs" />
+    <Compile Include="Services\DTO\PhisixApiStockDto.cs" />
+    <Compile Include="Services\DTO\PhisixApiStockListDto.cs" />
+    <Compile Include="Services\IPhisixApiService.cs" />
+    <Compile Include="Services\Mappers\IPhisixMapper.cs" />
+    <Compile Include="Services\Mappers\PhisixMapper.cs" />
+    <Compile Include="Services\PhisixApiService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -191,7 +214,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

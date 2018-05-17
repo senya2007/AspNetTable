@@ -10,8 +10,15 @@ namespace JsonTable.Services.Business
 {
     public class StockService : IStockService
     {
-        private IPhisixApiService phisixApiService = new PhisixApiService();
-        private IPhisixMapper phisixMapper = new PhisixMapper();
+       
+        private IPhisixApiService phisixApiService;
+        private IPhisixMapper phisixMapper;
+
+        public StockService(IPhisixApiService phisixApiService, IPhisixMapper phisixMapper)
+        {
+            this.phisixApiService = phisixApiService;
+            this.phisixMapper = phisixMapper;
+        }
 
         public async Task<StockList> GetStocks()
         {
