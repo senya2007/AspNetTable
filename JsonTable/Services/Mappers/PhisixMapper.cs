@@ -21,7 +21,7 @@ namespace JsonTable.Services.Mappers
 
         public Price Map(PhisixApiPriceDto dto)
         {
-            return new Price { Currency = dto.Currency, Amount = dto.Amount };
+            return new Price { Currency = dto.Currency, Amount = Math.Round(dto.Amount,2) };
         }
     }
 }
